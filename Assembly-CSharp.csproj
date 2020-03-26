@@ -58,6 +58,7 @@
      <Compile Include="Assets\scripts\moveWithPlayer.cs" />
      <Compile Include="Assets\scripts\playerMovement.cs" />
      <Compile Include="Assets\scripts\randomGenerate.cs" />
+     <Compile Include="Assets\scripts\scaleEnemy.cs" />
      <Compile Include="Assets\scripts\score.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/vamsi/Desktop/cubeRunner/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

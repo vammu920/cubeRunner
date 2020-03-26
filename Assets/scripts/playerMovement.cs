@@ -9,7 +9,7 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {   
-        rb.AddForce(0,0, forwardForce * Time.deltaTime);
+        rb.AddForce(0,0, forwardForce * Time.deltaTime, ForceMode.Force);
         if(Input.GetKey("d")){
             rb.AddForce(sideForce *Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
@@ -18,6 +18,9 @@ public class playerMovement : MonoBehaviour
         }
         if(rb.position.y < 4f){
             FindObjectOfType<GameManager>().EndGame();
+        }
+        if(Input.GetAxis("Jump") != 0){
+            rb.AddForce(Vector3.up * 10 * Time.deltaTime *80, ForceMode.Impulse);
         }
     }
 }
